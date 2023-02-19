@@ -11,12 +11,12 @@ import {
 import { BigNumber, ethers } from "ethers";
 import type { NextPage } from "next";
 import { useEffect, useState } from "react";
-import NFTCard from "../components/NFTCard";
+import NFTCard from "../components/Al-Falaq";
 import {
   nftDropContractAddress,
   stakingContractAddress,
   tokenContractAddress,
-} from "../consts/contractAddresses";
+} from "../consts/Al-Falaqcontract";
 import styles from "../styles/Home.module.css";
 
 const Stake: NextPage = () => {
@@ -84,7 +84,7 @@ const Stake: NextPage = () => {
                 <b>
                   {!claimableRewards
                     ? "Loading..."
-                    : ethers.utils.formatUnits(claimableRewards, 18)}
+                    : ethers.utils.formatUnits(claimableRewards,9)}
                 </b>{" "}
                 {tokenBalance?.symbol}
               </p>
@@ -104,6 +104,7 @@ const Stake: NextPage = () => {
             Claim Rewards
           </Web3Button>
 
+          
           <hr className={`${styles.divider} ${styles.spacerTop}`} />
           <h2>Your Staked NFTs</h2>
           <div className={styles.nftBoxGrid}>
