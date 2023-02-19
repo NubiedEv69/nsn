@@ -121,7 +121,7 @@ const Stake: NextPage = () => {
           <h2>Your Unstaked NFTs</h2>
           <div className={styles.nftBoxGrid}>
             {ownedNfts?.map((nft) => (
-              <div key={nft.metadata.id.toString()}>
+              <div className={styles.nftBox} key={nft.metadata.id.toString()}>
                 <ThirdwebNftMedia
                   metadata={nft.metadata}
                   className={styles.nftMedia}
